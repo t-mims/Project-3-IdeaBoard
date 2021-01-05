@@ -27,6 +27,8 @@ db.Pictures.create({ name: "" })
     console.log(message);
   });
 
+
+
 // Start the server
 app.listen(PORT, function() {
   console.log(`Server now listening on PORT ${PORT}!`);

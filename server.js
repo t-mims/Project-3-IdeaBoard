@@ -3,8 +3,6 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const db = require("./pictures");
-
 app.use(logger("dev"));
 
 // Define middleware here
@@ -27,6 +25,7 @@ db.Pictures.create({ name: "" })
     console.log(message);
   });
 
+app.use(routes);
 
 
 // Start the server

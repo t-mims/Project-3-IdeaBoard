@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// const db = require("./pictures");
+
 app.use(logger("dev"));
 
 // Define middleware here
@@ -17,13 +19,13 @@ if (process.env.NODE_ENV === "production") {
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populatedb", { useNewUrlParser: true });
 
-db.pictures.create({ name: "" })
-  .then(dbpictures => {
-    console.log(dbpictures);
-  })
-  .catch(({ message }) => {
-    console.log(message);
-  });
+// db.pictures.create({ name: "" })
+//   .then(dbpictures => {
+//     console.log(dbpictures);
+//   })
+//   .catch(({ message }) => {
+//     console.log(message);
+//   });
 
 app.use(routes);
 

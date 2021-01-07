@@ -34,6 +34,6 @@ const picturesSchema = new Schema({
   }
 });
 
-const Picture = mongoose.model("Picture", picturesSchema);
+const pictures = mongoose.model("Pictures", picturesSchema);
 
-module.exports = Picture;
+module.exports = pictures;

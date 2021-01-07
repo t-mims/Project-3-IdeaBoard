@@ -27,6 +27,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populatedb", { 
 //     console.log(message);
 //   });
 
+app.use(routes);
 
 
 // Start the server

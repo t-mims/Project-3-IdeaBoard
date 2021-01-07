@@ -17,9 +17,9 @@ if (process.env.NODE_ENV === "production") {
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populatedb", { useNewUrlParser: true });
 
-db.Pictures.create({ name: "" })
-  .then(dbPictures => {
-    console.log(dbPictures);
+db.pictures.create({ name: "" })
+  .then(dbpictures => {
+    console.log(dbpictures);
   })
   .catch(({ message }) => {
     console.log(message);

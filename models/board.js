@@ -31,6 +31,10 @@ const boardSchema= new Schema({
     goals:{
         type: Array,
         required: false
+    },
+    boardID:{
+        type:Number,
+        required: true
     }
 })
 

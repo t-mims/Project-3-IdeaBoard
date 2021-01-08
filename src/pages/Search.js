@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../components/container"
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
+// will require integration of state as well as handleSumbits for that will call Unsplash
+// may want to initiate (componentDidMount) with display of random results
 
 function Search(){
     return (

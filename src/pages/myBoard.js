@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../components/container"
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
+// will require integration of state as well as handleSumbits for adding/saving comments and
+// user updates associated with images/board
 
 function myBoard(){
     return (

@@ -3,6 +3,7 @@ import Container from "../container";
 import SearchBar from "../searchBar";
 import API from "../utils/API";
 // a lot of below code will be moved into a sep file; check Week 19 Act 23 for reference
+//moved to search pages
 class ImageRes extends Component {
     state={
         

@@ -1,5 +1,7 @@
 import React from "react";
 import Container from "../components/container"
+import SearchBar from "../components/searchBar"
+
 // will require integration of state as well as handleSumbits for that will call Unsplash
 // may want to initiate (componentDidMount) with display of random results
 //-----------------------------------------
@@ -11,7 +13,7 @@ import Container from "../components/container"
 function Search(){
     return (
         <div>This is for the actual search input text thing 
-            <Container></Container>
+            <Container><SearchBar></SearchBar></Container>
         </div>
     )
 }

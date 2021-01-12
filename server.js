@@ -1,11 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const passport= require("passport");
+const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-
 // const db = require("./pictures");
 
-app.use(logger("dev"));
+// app.use(logger("dev"));
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -21,11 +22,12 @@ app.post('/login',
     // If this function gets called, authentication was successful.
     // `req.user` contains the authenticated user.
     res.redirect('/users/' + req.user.username);
-  });
-                                                    
+  });                                       
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populatedb", { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/test',{useNewUrlParser: true, useUnifiedTopology : true})
+.then(() => console.log('connected,,'))
+.catch((err)=> console.log(err));
 
 // db.pictures.create({ name: "" })
 //   .then(dbpictures => {

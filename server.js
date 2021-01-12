@@ -4,7 +4,7 @@ const passport= require("passport");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-// const db = require("./pictures");
+const db = require("./board");
 
 // app.use(logger("dev"));
 
@@ -21,7 +21,7 @@ app.post('/login',
   function(req, res) {
     // If this function gets called, authentication was successful.
     // `req.user` contains the authenticated user.
-    res.redirect('/users/' + req.user.username);
+    res.redirect('./models/user/' + req.user.username);
   });                                       
 
 // Connect to the Mongo DB
@@ -29,13 +29,13 @@ mongoose.connect('mongodb://localhost/test',{useNewUrlParser: true, useUnifiedTo
 .then(() => console.log('connected,,'))
 .catch((err)=> console.log(err));
 
-// db.pictures.create({ name: "" })
-//   .then(dbpictures => {
-//     console.log(dbpictures);
-//   })
-//   .catch(({ message }) => {
-//     console.log(message);
-//   });
+db.board.create({ name: "" })
+  .then(dbboard => {
+    console.log(dbboard);
+  })
+  .catch(({ message }) => {
+    console.log(message);
+  });
 
 app.use(routes);
 

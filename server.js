@@ -3,9 +3,9 @@ const mongoose = require("mongoose");
 const passport= require("passport");
 const routes = require("./routes");
 const app = express();
+const db = require("./models");
+
 const PORT = process.env.PORT || 3001;
-// const db =" require("./pictures");
-// app.use(logger("dev"));
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -25,17 +25,17 @@ app.post('/login',
   });                                       
 
 // Connect to the Mongo DB
-mongoose.connect('mongodb://localhost/test',{useNewUrlParser: true, useUnifiedTopology : true})
-.then(() => console.log('connected,,'))
-.catch((err)=> console.log(err));
-
-db.pictures.create({ name: "" })
-   .then(dbpictures => {
-    console.log(dbpictures);
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/reactIdeaBoard",
+  { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
+);
+db.User.create({ name: "Jane Doe", password:"xvgau3", username:"testJane", userID:1})
+  .then(dbUser => {
+    console.log(dbUser);
   })
   .catch(({ message }) => {
     console.log(message);
-   });
+  });
 
 app.use(routes);
 

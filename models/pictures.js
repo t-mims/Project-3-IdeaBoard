@@ -1,9 +1,6 @@
  const mongoose = require("mongoose");
 // ====Use just board model for MVP and add board IDs for all required images and comments, as well as
 //  user id to direct data instead of using sep. tables for now 
-
-
-
  const Schema = mongoose.Schema;
 
  const picturesSchema = new Schema({

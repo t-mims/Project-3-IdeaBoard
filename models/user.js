@@ -31,8 +31,12 @@ const userSchema = new Schema({
   userCreated: {
     type: Date,
     default: Date.now
-  }
+  },
   //we may also need to add an id for users
+  userID:{
+    type:Number,
+    required:true
+  }
 });
 
 const User = mongoose.model("User", userSchema);

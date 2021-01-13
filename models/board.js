@@ -35,6 +35,10 @@ const boardSchema= new Schema({
     boardID:{
         type:Number,
         required: true
+    },
+    userID:{
+        type:Number,
+        required: true
     }
 })
 

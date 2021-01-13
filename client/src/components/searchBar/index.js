@@ -15,9 +15,9 @@ state = {
   }
 
   randomImg=()=>{
-     API.getRandomImages().
-     then(res => this.setState({ results: res.data.data })).
-     catch(err => console.log(err));
+     API.getRandomImages()
+     .then(res => this.setState({ results: res.data.data }))
+     .catch(err => console.log(err));
   }
   imgSearch = query => {
     API.getUserSearch(query)

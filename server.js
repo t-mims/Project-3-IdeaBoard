@@ -4,8 +4,7 @@ const passport= require("passport");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-// const db = require("./pictures");
-
+// const db =" require("./pictures");
 // app.use(logger("dev"));
 
 // Define middleware here
@@ -22,6 +21,7 @@ app.post('/login',
     // If this function gets called, authentication was successful.
     // `req.user` contains the authenticated user.
     res.redirect('/users/' + req.user.username);
+    //----(./models/user) file path to connect passport to USER model 
   });                                       
 
 // Connect to the Mongo DB
@@ -29,13 +29,13 @@ mongoose.connect('mongodb://localhost/test',{useNewUrlParser: true, useUnifiedTo
 .then(() => console.log('connected,,'))
 .catch((err)=> console.log(err));
 
-// db.pictures.create({ name: "" })
-//   .then(dbpictures => {
-//     console.log(dbpictures);
-//   })
-//   .catch(({ message }) => {
-//     console.log(message);
-//   });
+db.pictures.create({ name: "" })
+   .then(dbpictures => {
+    console.log(dbpictures);
+  })
+  .catch(({ message }) => {
+    console.log(message);
+   });
 
 app.use(routes);
 

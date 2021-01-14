@@ -27,6 +27,7 @@ state = {
   handleInputChange = event => {
     const name = event.target.name;
     const value = event.target.value;
+    console.log(value);
     this.setState({
       [name]: value
     });

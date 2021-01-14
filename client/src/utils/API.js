@@ -9,6 +9,7 @@ const queryURL="https://api.unsplash.com/";
 // Access to XMLHttpRequest at 'https://unsplash.com/developers' (redirected from 'url') from origin 'http://localhost:3000' 
 // has been blocked by CORS policy: The 'Access-Control-Allow-Origin' header contains the invalid value 'unsplash.com'.
 // hits a 200 initially then a 301 then a failed redirect 
+
 export default{
     getRandomImages: function(){
         return axios.get("https://api.unsplash.com/photos/?client_id="+accessKey);

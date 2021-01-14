@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const passport= require("passport");
+const passportLocal= require("passport-local");
+const passport= require ("passport");
 const routes = require("./routes");
 const app = express();
 const db = require("./models");
@@ -29,6 +30,7 @@ mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/reactIdeaBoard",
   { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
 );
+//We may want to create a seed file for testing
 db.User.create({ name: "Jane Doe", password:"xvgau3", username:"testJane", userID:1})
   .then(dbUser => {
     console.log(dbUser);

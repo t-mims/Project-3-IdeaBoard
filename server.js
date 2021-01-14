@@ -1,14 +1,22 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const passport= require("passport");
+const passport = require("./config/passport");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-const db = require("./board");
+const db = require("./models");
 
-// app.use(logger("dev"));
+app.configure(function() {
+  app.use(express.static('public'));
+  app.use(express.cookieParser());
+  app.use(express.bodyParser());
+  app.use(express.session({ secret: 'keyboard cat' }));
+  app.use(passport.initialize());
+  app.use(passport.session());
+  app.use(app.router);
+});
 
-// Define middleware here
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
@@ -21,7 +29,7 @@ app.post('/login',
   function(req, res) {
     // If this function gets called, authentication was successful.
     // `req.user` contains the authenticated user.
-    res.redirect('./models/user/' + req.user.username);
+    res.redirect('/' + req.user.username);
   });                                       
 
 // Connect to the Mongo DB
@@ -29,7 +37,7 @@ mongoose.connect('mongodb://localhost/test',{useNewUrlParser: true, useUnifiedTo
 .then(() => console.log('connected,,'))
 .catch((err)=> console.log(err));
 
-db.board.create({ name: "" })
+db.Board.create({ name: "" })
   .then(dbboard => {
     console.log(dbboard);
   })

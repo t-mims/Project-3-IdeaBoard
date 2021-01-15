@@ -5,16 +5,19 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const db = require("./models");
+const session = require("express-session")
 
-app.configure(function() {
+// app.configure(function() {
   app.use(express.static('public'));
-  app.use(express.cookieParser());
-  app.use(express.bodyParser());
-  app.use(express.session({ secret: 'keyboard cat' }));
+  app.use(express.urlencoded({extended:true}));
+  app.use(express.json());
+  // app.use(express.cookieParser());
+  // app.use(express.bodyParser());
+  app.use(session({ secret: 'keyboard cat' }));
   app.use(passport.initialize());
   app.use(passport.session());
-  app.use(app.router);
-});
+  // app.use(app.router);
+// });
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -33,17 +36,16 @@ app.post('/login',
   });                                       
 
 // Connect to the Mongo DB
-mongoose.connect('mongodb://localhost/test',{useNewUrlParser: true, useUnifiedTopology : true})
-.then(() => console.log('connected,,'))
-.catch((err)=> console.log(err));
+mongoose.connect('mongodb://localhost/test' )
+ 
 
-db.Board.create({ name: "" })
-  .then(dbboard => {
-    console.log(dbboard);
-  })
-  .catch(({ message }) => {
-    console.log(message);
-  });
+// db.Board.create({ name: "" })
+//   .then(dbboard => {
+//     console.log(dbboard);
+//   })
+//   .catch(({ message }) => {
+//     console.log(message);
+//   });
 
 app.use(routes);
 

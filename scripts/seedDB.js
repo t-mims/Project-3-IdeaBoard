@@ -95,7 +95,7 @@ const pictureSeed = [
         imageURL:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHrIVOO0Fx7dubB6pxLhTuYYkgWMNdHjOgzA&usqp=CAU"
     }
 ]
-db.User.remove({}).then(() => db.User.collection.insertMany(userSeed));
-db.Board.remove({}).then(() => db.Board.collection.insertMany(boardSeed));
-db.Picture.remove({}).then(() => db.Picture.collection.insertMany(pictureSeed));
+db.User.deleteMany({}).then(() => db.User.collection.insertMany(userSeed));
+db.Board.deleteMany({}).then(() => db.Board.collection.insertMany(boardSeed));
+db.Picture.deleteMany({}).then(() => db.Picture.collection.insertMany(pictureSeed));
 

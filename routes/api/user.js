@@ -4,11 +4,15 @@ const router= require("express").Router();
 const userController= require("../../controllers/userController");
 //this file will utilize the controller and select methods based on request
 //route will be "/api/user" + name in router 
+//api/user/login==not sure about these renders
 router.get('/login',(req,res)=>{
     res.render('login');
 })
+//api/user/register
 router.get('/register',(req,res)=>{
     res.render('register')
+    // .get(userController.findUser)
+    // .post(userController.createUser)
     })
 //Register handle
 router.post('/register',(req,res)=>{

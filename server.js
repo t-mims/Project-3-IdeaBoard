@@ -5,16 +5,19 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const db = require("./models");
+const session = require("express-session")
 
-app.configure(function() {
+// app.configure(function() {
   app.use(express.static('public'));
-  app.use(express.cookieParser());
-  app.use(express.bodyParser());
-  app.use(express.session({ secret: 'keyboard cat' }));
+  app.use(express.urlencoded({extended:true}));
+  app.use(express.json());
+  // app.use(express.cookieParser());
+  // app.use(express.bodyParser());
+  app.use(session({ secret: 'keyboard cat' }));
   app.use(passport.initialize());
   app.use(passport.session());
-  app.use(app.router);
-});
+  // app.use(app.router);
+// });
 
 
 app.use(express.urlencoded({ extended: true }));

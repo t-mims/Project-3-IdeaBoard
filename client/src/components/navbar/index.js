@@ -45,6 +45,15 @@ function Navbar() {
             InspoSearch
           </Link>
         </li>
+        <li className="nav-item">
+          <Link
+            to="/masonry"
+            className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
+          >
+            Masonry
+          </Link>
+        </li>
+        
       </ul>
     </div>
   </nav>

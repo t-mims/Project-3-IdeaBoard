@@ -1,16 +1,67 @@
-import React from "react";
-import Container from "../components/container"
+import React, { useState } from "react";
+import Container from "../components/container";
+import API from "../utils/API";
 
 //This is a static page/ may include state in order to greet user by their name but
 // definetly not a necessary function
 function Register(){
-    // return (
+  const [username, setUsername] = useState();
+  const [password, setPassword] = useState();
+  const [email, setEmail] = useState();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    API.register({username: username, password: password, email: email})
+    .then (res => {
+      console.log("user created");
+      //redirect to login page
+    })
+    .catch (error => {
+       console.log(error); 
+    })
+  }
+    return (
    
-    //     <div>This is home for the home page
-    //     <Container>
-    //      <image src=""></image>
-    //       </Container>
-    //     </div>
-    // )
+        <div>This is home for the home page
+        <Container>
+         <h1>Register</h1>
+          <form>
+          <div>
+              <label for="name">Name</label>
+              <input
+                type="name"
+                name="name"
+                placeholder="Enter Name"
+                onChange={event => setUsername(event.target.value)}
+              />
+            
+          </div>
+          <div>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter Email"
+                onChange={event => setEmail(event.target.value)}
+              />
+            </div>
+            <div >
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Create Password"
+                onChange={event => setPassword(event.target.value)}
+              />
+            </div>
+            <button type="submit" className="btn btn-primary btn-block"
+            onClick={handleSubmit}>
+              
+              Register
+            </button>
+          </form>
+          <p >Have An Account? <a href="/users/login">Login</a></p>
+          </Container>
+        </div>
+    )
 }
 export default Register

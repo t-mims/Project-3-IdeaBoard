@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    color: white;
+    color: black;
 }
 header {
     background-color: white;
@@ -28,6 +28,15 @@ header {
 
 header * {
     display: inline;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
 }
 
 header li {

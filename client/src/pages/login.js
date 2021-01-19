@@ -13,6 +13,7 @@ function Login() {
       .then((res) => {
         console.log("login");
         //redirect to Board page
+        window.location.replace("/myBoard");
       })
       .catch((error) => {
         console.log(error);

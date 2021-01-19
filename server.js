@@ -24,7 +24,12 @@ if (process.env.NODE_ENV === "production") {
  require("./routes/api/api-routes")(app);                     
 
 // Connect to the Mongo DB
-mongoose.connect('mongodb://localhost/Board' )
+mongoose.connect('mongodb://localhost/Board' ),{
+  useNewUrlParser:true,
+  useUnifiedTopology:true,
+  useCreateIndex:true,
+  useFindAndModify:false
+}
  
 
 // db.Board.create({ name: "" })

@@ -4,13 +4,14 @@ import API from "../utils/API";
 
 function UserBoard() {
     const [boards, setBoards] = useState([])
+
     
     useEffect(() => {
         loadBoards()
     }, []);
 
-    function loadBoards(id) {
-        API.getBoard(id).then(res => setBoards(res.data))
+    function loadBoards() {
+        API.getBoards().then(res => setBoards(res.data))
     };
     function handleSubmit(event) {
         event.preventDefault()

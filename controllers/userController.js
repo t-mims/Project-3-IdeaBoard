@@ -39,7 +39,7 @@ module.exports = {
     },
     getBoards:function (req,res){
         console.log(req.user);
-        db.Board.findOne({userID: req.userID})
+        db.Board.findOne({userID: req.user.userID})
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     }

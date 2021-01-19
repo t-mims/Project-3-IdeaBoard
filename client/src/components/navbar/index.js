@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">
-        IdeaBoard
+        Make It Happen
       </Link>
       <div>
         <ul className="navbar-nav">
@@ -19,31 +19,6 @@ function Navbar() {
                   : "nav-link"
               }
             >
-              Homepage
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/inpso"
-              className={
-                window.location.pathname === "/inspo"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Finding Inspo
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/myBoard"
-              className={
-                window.location.pathname === "/myBoard"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              MyBoard
             </Link>
           </li>
           <li className="nav-item">
@@ -67,7 +42,7 @@ function Navbar() {
                   : "nav-link"
               }
             >
-              Masonry
+              MyBoard
             </Link>
           </li>
          
@@ -80,7 +55,7 @@ function Navbar() {
                     : "nav-link"
                 }
               >
-                Register
+                Sign-Up/Sign-In
               </Link>
             </li>
           
@@ -89,5 +64,6 @@ function Navbar() {
     </nav>
   );
 }
+
 
 export default Navbar;

@@ -1,20 +1,35 @@
-import React from "react";
-import Container from "../components/container"
-import SearchBar from "../components/searchBar"
+import React, { Component, useState } from "react";
+import API from "../utils/API";
+import Container from "../components/container";
+import SearchForm from "../components/searchForm";
+import Results from "../components/results";
 
-// will require integration of state as well as handleSumbits for that will call Unsplash
-// may want to initiate (componentDidMount) with display of random results
-//-----------------------------------------
-//class Search extends Component{
-//state={ search:"",results:[],error:""}
-//componentDidMount(){API.getRandomImages()
-//.then(res=>this.setState({results:res.data----Plug in ref to random images res}))}
-//====Maybe overlay the search bar over the random images in the background??
-function Search(){
-    return (
-        <div>This is for the actual search input text thing 
-            <Container><SearchBar></SearchBar></Container>
-        </div>
-    )
-}
+function Search() 
+
+const api = createApi({
+  // Don't forget to set your access token here!
+  // See https://unsplash.com/developers
+  accessKey: ""
+});
+
+const PhotoComp = ({ photo }) => {
+  const { user, urls } = photo;
+
+  return (
+    <Fragment>
+      <img className="img" src={urls.regular} />
+      <a
+        className="credit"
+        target="_blank"
+        href={`https://unsplash.com/@${user.username}`}
+      >
+        {user.name}
+      </a>
+    </Fragment>
+  );
+};
+
+};
+
+
 export default Search;

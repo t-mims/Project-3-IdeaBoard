@@ -1,12 +1,11 @@
-import React, { Fragment, useEffect, useState } from "react";
-import PhotoComp from "../resBody";
-import API from "../../utils/API"
+import React from "react";
 
-function Results() {
+function ResBody() {
     const [data, setPhotosResponse] = useState(null);
+
     useEffect(() => {
-        API.search
-            .getPhotos({ query: "nature", orientation: "landscape" })
+        api.search
+            .getPhotos({ query: "cat", orientation: "landscape" })
             .then(result => {
                 setPhotosResponse(result);
             })
@@ -21,13 +20,13 @@ function Results() {
         return (
             <div>
                 <div>{data.errors[0]}</div>
+                <div>PS: Make sure to set your access token!</div>
             </div>
         );
-    }
-    else {
+    } else {
         return (
-            <div>
-                <ul>
+            <div className="feed">
+                <ul className="columnUl">
                     {data.response.results.map(photo => (
                         <li key={photo.id} className="li">
                             <PhotoComp photo={photo} />
@@ -38,5 +37,5 @@ function Results() {
         );
     }
 };
-
-export default Results;
+      
+export default ResBody;

@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const boardSchema= new Schema({
     //just the anme of the attached user
     //may need to add some id
-    user: {
+    name: {
     type:String,
     required: true}
     ,

@@ -38,7 +38,7 @@ app.post('/login',
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactIdeaBoard",
+  process.env.MONGODB_URI || "mongodb://localhost/Board",
   { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
 );
 //We may want to create a seed file for testing

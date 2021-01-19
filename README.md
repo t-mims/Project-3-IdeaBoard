@@ -2,7 +2,7 @@
 ### It's the final countdown
 #### A dream is a wish your heart makes, when you build a vision board and GET YOUR A** IN GEAR 
 
-![](public/images/quote.jpg) 
+![](quote.jpg) 
 
 ![](FGM2.gif)
 

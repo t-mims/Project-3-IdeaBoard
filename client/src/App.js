@@ -2,10 +2,13 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import NewBoard from "./pages/newBoard";
+import MyBoard from "./pages/myboard";
 import Search from "./pages/Search";
 import Home from "./pages/Home";
 import Login from "./pages/login";
-import Masonry from "./pages/masonryCards";
+import Register from "./pages/register";
+import Masonry from "./pages/UserBoard";
 
 
 //and import other necessary pages (which will correspond to the routes) and compnents
@@ -17,8 +20,11 @@ function App() {
         {/* these components still need to be defined */}
         <Route exact path="/login" component={Login} />
         <Route exact path="/" component={Home} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/myBoard" component={MyBoard} />
+        <Route exact path="/newBoard" component={NewBoard} />
         <Route exact path="/search" component={Search} />
-        <Route exact path="/myBoard" component={Masonry} />
+        <Route exact path="/masonry" component={Masonry} />
 
         <Footer />
       </div>

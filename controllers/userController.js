@@ -38,7 +38,8 @@ module.exports = {
         .catch(err=> res.status(422).json(err)));
     },
     getBoards:function (req,res){
-        db.Board.findOne(req.body)
+        console.log(req.user);
+        db.Board.findOne({userID: req.userID})
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     }

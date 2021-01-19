@@ -17,7 +17,10 @@ export default{
     },
     login: function(loginInfo) {
         return axios.post("/api/login", loginInfo);
-    }
+    },
+    getBoard: function (id) {
+        return axios.get("/api/user/" + id);
+    },
 
 };
 

@@ -26,30 +26,30 @@ function Register(){
          <h1>Register</h1>
           <form>
           <div>
-              <label for="name">Name</label>
+              <label for="name">Name  </label>
               <input
                 type="name"
                 name="name"
-                placeholder="Enter Name"
+                placeholder=  "Enter Name"
                 onChange={event => setUsername(event.target.value)}
               />
             
           </div>
           <div>
-              <label for="email">Email</label>
+              <label for="email">Email  </label>
               <input
                 type="email"
                 name="email"
-                placeholder="Enter Email"
+                placeholder=  "Enter Email"
                 onChange={event => setEmail(event.target.value)}
               />
             </div>
             <div >
-              <label for="password">Password</label>
+              <label for="password">Password  </label>
               <input
                 type="password"
                 name="password"
-                placeholder="Create Password"
+                placeholder=  "Create Password"
                 onChange={event => setPassword(event.target.value)}
               />
             </div>
@@ -59,7 +59,7 @@ function Register(){
               Register
             </button>
           </form>
-          <p >Have An Account? <a href="/users/login">Login</a></p>
+          <p >Have An Account? <a href="/login">Login</a></p>
           </Container>
         </div>
     )

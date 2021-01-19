@@ -10,6 +10,7 @@ import SearchBar from "../components/searchBar"
 //componentDidMount(){API.getRandomImages()
 //.then(res=>this.setState({results:res.data----Plug in ref to random images res}))}
 //====Maybe overlay the search bar over the random images in the background??
+//result also appennds here
 function Search(){
     return (
         <div>This is for the actual search input text thing 

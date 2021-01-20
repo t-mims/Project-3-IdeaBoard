@@ -28,7 +28,4 @@ router.post('/login',(req,res,next)=>{
 router.route("/")
     .get(userController.findUser)
     
-router.route("/:id")
-    .get(userController.updateUser)
-
 module.exports= router; 

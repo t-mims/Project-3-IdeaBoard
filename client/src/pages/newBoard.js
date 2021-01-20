@@ -1,20 +1,25 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Container from "../components/container";
-import {Input,Text,BoardButton} from "../components/boardForm";
+import { Input, Text, BoardButton } from "../components/boardForm";
 import API from "../utils/API";
 
 // will require integration of state as well as handleSumbits for adding/saving
 function NewBoard() {
     const [boards, setBoards] = useState({
-    user: "",
-    comment: "",
-    picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD9QWUKeyHuBDkW0np6RBpVQEe8EV_e8J1uQ&usqp=CAU",
-    budget:"",
-    goals:[""]
-  });
+        user: "",
+        comment: "",
+        picture: "",
+        budget: "",
+        goals: [""]
+    });
+    function handleInputChange(event) {
+        const { name, value } = event.target;
+        setBoards({ ...boards, [name]: value })
+    };
 
-    function handleFormSubmit(event) {
+    function handleSubmit(event) {
         event.preventDefault();
+        console.log(event);
         if (boards.user && boards.comment) {
             API.saveBoard({
                 name: boards.name,
@@ -22,9 +27,13 @@ function NewBoard() {
                 budget: boards.budget,
                 comment: boards.comment,
                 goals: boards.goals
-            }).then( window.location.replace("/myBoard"));
-
-                
+            }).then(() => setBoards({
+                user: "",
+                comment: "",
+                picture: "",
+                budget: "",
+                goals: [""]
+            })).then(window.location.replace("/UserBoard"))
         }
     }
 
@@ -33,26 +42,39 @@ function NewBoard() {
             <Container>
                 <h1>"See it, Believe it"</h1>
                 <form>
+                    <h3>Board Name</h3>
                     <Input
+                        onChange={handleInputChange}
                         name="name"
-                        placeholder="Board name"
+                        placeholder="Give it a name!"
                         value={boards.name}
                     />
+                     <h3>Description</h3>
                     <Text
+                        onChange={handleInputChange}
                         name="comment"
-                        placeholder="Comment/Description"
+                        placeholder="What's this board about?"
                         value={boards.comment}
                     />
-                    <Text
+                     <h3>Inspo Image</h3>
+                    <Input
+                        onChange={handleInputChange}
                         name="picture"
-                        placeholder="image url/ source"
+                        placeholder="Whats the image url/ source?"
                         value={boards.picture}
                     />
+                     <h3>Setting Goals</h3>
+                    <Text
+                        onChange={handleInputChange}
+                        name="goals"
+                        placeholder="Any goals this inspires you to set"
+                        value={boards.goals}
+                    />
                     <BoardButton
-                        disabled={!(boards.user && boards.comment)}
-                        onClick={handleFormSubmit}
+                        disabled={!(boards.name && boards.comment)}
+                        onClick={handleSubmit}
                     >
-                        Submit new board!
+                        Create new board
                   </BoardButton>
                 </form>
 

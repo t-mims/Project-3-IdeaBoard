@@ -29,7 +29,7 @@ export function BoardCard({
     >
       <div>
         <div class="card">
-          <img class="card-img-top" src={picture} alt="Card image cap" />
+          <img class="card-img-top" src={picture} alt=""/>
           <div class="card-body">
             <h5 class="card-title">{name}</h5>
             <p class="card-text">

@@ -15,7 +15,7 @@ function UserBoard() {
     };
     function handleSubmit(event) {
         event.preventDefault()
-        window.location.replace("/myBoard");
+        window.location.replace("/newBoard");
 
     }
     return (

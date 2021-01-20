@@ -14,7 +14,7 @@ function Login() {
       .then((res) => {
         console.log("login");
         //redirect to Board page
-        window.location.replace("/myBoard");
+        window.location.replace("/UserBoard");
       })
       .catch((error) => {
         console.log(error);

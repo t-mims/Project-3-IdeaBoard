@@ -1,24 +1,26 @@
 import React, { useState } from "react";
 import Container from "../components/container";
-import API from "../utils/API"
+import API from "../utils/API";
 
 //This is a static page/ may include state in order to greet user by their name but
 // definetly not a necessary function
 function Login() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     API.login({ username: username, password: password })
       .then((res) => {
         console.log("login");
         //redirect to Board page
-        window.location.replace("/myBoard");
+        window.location.replace("/UserBoard");
       })
       .catch((error) => {
         console.log(error);
       });
   };
+
   return (
     <div>
       This is home for the home page
@@ -55,13 +57,4 @@ function Login() {
     </div>
   );
 }
-// return (
-
-//     <div>This is home for the home page
-//     <Container>
-//      <image src=""></image>
-//       </Container>
-//     </div>
-// )
-
 export default Login;

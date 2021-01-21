@@ -4,7 +4,6 @@ const passport = require("./config/passport");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-const db = require("./models");
 const session = require("express-session")
 
  
@@ -21,22 +20,15 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
- require("./routes/api/api-routes")(app);                     
-
+ require("./routes/api/api-routes")(app);  
+ app.use(routes);                   
 // Connect to the Mongo DB
-mongoose.connect('mongodb://localhost/Board' )
- 
-
-// db.Board.create({ name: "" })
-//   .then(dbboard => {
-//     console.log(dbboard);
-//   })
-//   .catch(({ message }) => {
-//     console.log(message);
-//   });
-
-// app.use(routes);
-
+mongoose.connect('mongodb://localhost/Board'),{
+  useNewUrlParser:true,
+  useUnifiedTopology:true,
+  useCreateIndex:true,
+  useFindAndModify:false
+}
 
 // Start the server
 app.listen(PORT, function() {

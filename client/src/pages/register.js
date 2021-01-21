@@ -13,7 +13,7 @@ function Register(){
     API.register({username: username, password: password, email: email})
     .then (res => {
       console.log("user created");
-      //redirect to login page
+      window.location.replace("/UserBoard");
     })
     .catch (error => {
        console.log(error); 

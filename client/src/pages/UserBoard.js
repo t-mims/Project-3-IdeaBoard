@@ -1,17 +1,24 @@
 import React, { useState, useEffect } from "react";
-import {BoardList,BoardCard} from "../components/boardList";
+import { BoardList, BoardCard } from "../components/boardList";
 import API from "../utils/API";
 
 function UserBoard() {
     const [boards, setBoards] = useState([])
 
-    
+
     useEffect(() => {
         loadBoards()
     }, []);
 
     function loadBoards() {
-        API.getBoards().then(res => setBoards(res.data))
+        API.getBoards()
+            .then(() => setBoards({
+                user: "",
+                comment: "",
+                picture: "",
+                budget: "",
+                goals: [""]
+            }))
     };
     function handleSubmit(event) {
         event.preventDefault()

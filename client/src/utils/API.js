@@ -5,12 +5,6 @@ import axios from "axios";
 // // const randomURL="https://api.unsplash.com/photos/random/?count=30";
 // const queryURL="https://api.unsplash.com/"; 
 export default{
-    // getRandomImages: function(){
-    //     return axios.get("https://api.unsplash.com/photos/random/?count=30&client_id=0fOPsIZ3x5wzU0_f5CoDIvuk6Bf3IHmpTzrpix9EINM");
-    // },
-    getUserSearch: function(query){
-        return axios.get(queryURL+ "?"+query +"&client_id="+accessKey);
-    },
     register: function(userInfo) {
         return axios.post("/api/signup", userInfo);
 

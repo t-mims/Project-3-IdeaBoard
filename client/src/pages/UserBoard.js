@@ -6,19 +6,20 @@ function UserBoard() {
     const [boards, setBoards] = useState([])
 
 
+
     useEffect(() => {
         loadBoards()
     }, []);
 
     function loadBoards() {
         API.getBoards()
-            .then(() => setBoards({
-                user: "",
-                comment: "",
-                picture: "",
-                budget: "",
-                goals: [""]
-            }))
+            .then((res) => setBoards(res.data))
+                // user: "",
+                // comment: "",
+                // picture: "",
+                // budget: "",
+                // goals: [""]
+            
     };
     function handleSubmit(event) {
         event.preventDefault()

@@ -24,21 +24,9 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link
-              to="/search"
+              to="/UserBoard"
               className={
-                window.location.pathname === "/search"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              InspoSearch
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/masonry"
-              className={
-                window.location.pathname === "/search"
+                window.location.pathname === "/UserBoard"
                   ? "nav-link active"
                   : "nav-link"
               }

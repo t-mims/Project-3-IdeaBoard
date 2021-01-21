@@ -8,11 +8,6 @@ const userController= require("../../controllers/userController");
   .put(userController.updateBoard)
   .post(userController.createBoard)
   .delete(userController.removeBoard)
-
-  router.route("/")
-    .get(userController.findUser)
-    
-// router.route("/:id")
-//     .get(userController.updateUser)
+  
 
 module.exports= router; 

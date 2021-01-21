@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const passport = require("./config/passport");
+const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const session = require("express-session")
@@ -21,7 +22,6 @@ if (process.env.NODE_ENV === "production") {
 
  require("./routes/api/api-routes")(app);  
  app.use(routes);                   
-
 // Connect to the Mongo DB
 mongoose.connect('mongodb://localhost/Board'),{
   useNewUrlParser:true,

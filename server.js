@@ -21,7 +21,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
- require("./routes/api/api-routes")(app);                     
+ require("./routes/api/api-routes")(app);  
+ app.use(routes);                   
 
 // Connect to the Mongo DB
 mongoose.connect('mongodb://localhost/Board' ),{

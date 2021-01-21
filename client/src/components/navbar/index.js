@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import'./nbstyle.css';
 
 function Navbar() {
   return (
@@ -56,6 +57,18 @@ function Navbar() {
                 }
               >
                 Sign-Up/Sign-In
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/home"
+                className={
+                  window.location.pathname === "/home"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                Logout
               </Link>
             </li>
           

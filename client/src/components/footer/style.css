@@ -1,1 +1,5 @@
-text-align: center;
+.footer {
+    text-align: center; 
+    background-color: rgb(235, 35, 35);
+}
+

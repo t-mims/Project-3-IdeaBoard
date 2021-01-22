@@ -19,7 +19,13 @@ function NewBoard() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(event);
+        console.log({
+            name: boards.name,
+            picture: boards.picture,
+            budget: boards.budget,
+            comment: boards.comment,
+            goals: boards.goals
+        });
         if (boards.user && boards.comment) {
             API.saveBoard({
                 name: boards.name,

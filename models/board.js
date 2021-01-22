@@ -4,11 +4,7 @@ const Schema = mongoose.Schema;
 
 const boardSchema= new Schema({
     //just the anme of the attached user
-    //may need to add some id
-    user: {
-    type:String,
-    required: true}
-    ,
+ 
     //a description or comment entered for any item on the idea board
     comment:{
         type: String,
@@ -31,11 +27,8 @@ const boardSchema= new Schema({
     goals:{
         type: Array,
         required: false
-    },
-    boardID:{
-        type:Number,
-        required: true
     }
+
 })
 
 const Board= mongoose.model("Board", boardSchema);

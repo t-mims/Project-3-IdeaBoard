@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Login from "./pages/login";
 import Register from "./pages/register";
 import Masonry from "./pages/UserBoard";
+import Logout from "./pages/logout";
 
 
 //and import other necessary pages (which will correspond to the routes) and compnents
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/newBoard" component={NewBoard} />
         <Route exact path="/search" component={Search} />
         <Route exact path="/myBoard" component={Masonry} />
+        <Route exact path="/logout" component={Logout} />
 
         <Footer />
       </div>

@@ -1,3 +1,11 @@
-.nav{
-    background-color: rgb(65, 112, 59);
+.navbar-brand {
+    background-color: lightblue;
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.navbar-nav {
+    background-color: lightblue;
+    margin-right: 500px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

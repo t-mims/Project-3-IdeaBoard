@@ -9,7 +9,7 @@ module.exports = {
             comment: req.body.comment ,
             goals: req.body.goals ,
             budget: req.body.budget,
-            userID: db.User.find({"_id":{"$in":res["userID"]}})
+            userID: req.user._id,
         })
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));

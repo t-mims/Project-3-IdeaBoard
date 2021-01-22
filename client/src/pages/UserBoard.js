@@ -5,8 +5,6 @@ import API from "../utils/API";
 function UserBoard() {
     const [boards, setBoards] = useState([])
 
-
-
     useEffect(() => {
         loadBoards()
     }, []);

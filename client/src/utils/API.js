@@ -13,7 +13,7 @@ export default{
         return axios.post("/api/login", loginInfo);
     },
     getBoards: function () {
-        return axios.get("/api/board");
+        return axios.get("/api/user/board");
     },
     saveBoard: function(boardInfo){
         return axios.post("/api/user/board",boardInfo)

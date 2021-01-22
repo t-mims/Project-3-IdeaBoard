@@ -3,15 +3,13 @@ const User = require("./user")
 
 const Schema = mongoose.Schema;
 
-<<<<<<< HEAD
 const boardSchema = new Schema({
-=======
-const boardSchema= new Schema({
-    //just the anme of the attached user
- 
->>>>>>> main
     //a description or comment entered for any item on the idea board
-    
+    name: {
+        type:String,
+        required: true
+    }
+    ,
     comment: {
         type: String,
         required: true
@@ -33,7 +31,6 @@ const boardSchema= new Schema({
     goals: {
         type: Array,
         required: false
-<<<<<<< HEAD
     },
     boardID: Schema.Types.ObjectId,
 
@@ -41,10 +38,6 @@ const boardSchema= new Schema({
         type: Schema.Types.ObjectId,
         ref: User
     }),
-=======
-    }
-
->>>>>>> main
 })
 
 const Board = mongoose.model("Board", boardSchema);

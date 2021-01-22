@@ -36,26 +36,31 @@ const boardSeed = [
     {
         user: "testJoe",
         comment: "My first board",
+        name:"board 1"
     }
     ,
     {
         user: "testJoe",
         comment: "second board",
+        name: "board 2"
     }
     ,
     {
         user: "testAlly",
         comment: "Al's board",
+        name:"not pinterest"
     }
     ,
     {
         user: "Username",
         comment: "default",
+        name:"default"
     }
     ,
     {
         user: "testJoe",
         comment: "III",
+        name:"third"
     }
 ]
 const pictureSeed = [

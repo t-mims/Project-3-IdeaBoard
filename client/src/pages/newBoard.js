@@ -16,25 +16,18 @@ function NewBoard() {
         const { name, value } = event.target;
         setBoards({ ...boards, [name]: value })
     };
-
+    // setBoards([...boards, res.data]
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(event);
-        if (boards.user && boards.comment) {
-            API.saveBoard({
-                name: boards.name,
-                picture: boards.picture,
-                budget: boards.budget,
-                comment: boards.comment,
-                goals: boards.goals
-            }).then(() => setBoards({
-                user: "",
-                comment: "",
-                picture: "",
-                budget: "",
-                goals: [""]
-            })).then(window.location.replace("/UserBoard"))
-        }
+
+        API.saveBoard({
+            name: boards.name,
+            picture: boards.picture,
+            budget: boards.budget,
+            comment: boards.comment,
+            goals: boards.goals
+        }).then(window.location.replace("/UserBoard"))
+
     }
 
     return (
@@ -49,21 +42,21 @@ function NewBoard() {
                         placeholder="Give it a name!"
                         value={boards.name}
                     />
-                     <h3>Description</h3>
+                    <h3>Description</h3>
                     <Text
                         onChange={handleInputChange}
                         name="comment"
                         placeholder="What's this board about?"
                         value={boards.comment}
                     />
-                     <h3>Inspo Image</h3>
+                    <h3>Inspo Image</h3>
                     <Input
                         onChange={handleInputChange}
                         name="picture"
                         placeholder="Whats the image url/ source?"
                         value={boards.picture}
                     />
-                     <h3>Setting Goals</h3>
+                    <h3>Setting Goals</h3>
                     <Text
                         onChange={handleInputChange}
                         name="goals"

@@ -15,8 +15,8 @@ export default{
     getBoards: function () {
         return axios.get("/api/user/board");
     },
-    saveBoard: function(){
-        return axios.post("/api/user/board")
+    saveBoard: function(boardInfo){
+        return axios.post("/api/user/board",boardInfo)
     },
 
 };

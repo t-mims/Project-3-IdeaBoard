@@ -14,12 +14,7 @@ function UserBoard() {
     function loadBoards() {
         API.getBoards()
             .then((res) => setBoards(res.data))
-                // user: "",
-                // comment: "",
-                // picture: "",
-                // budget: "",
-                // goals: [""]
-            
+            .then((res)=>console.log(res))
     };
     function handleSubmit(event) {
         event.preventDefault()

@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
-
 const userSchema = new Schema({
 
   email: {
@@ -26,7 +25,6 @@ const userSchema = new Schema({
     type: Date,
     default: Date.now
   }
-  //we may also need to add an id for users
 });
 
 const User = mongoose.model("User", userSchema);

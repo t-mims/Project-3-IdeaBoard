@@ -4,17 +4,16 @@ const mongoose = require("mongoose");
  const Schema = mongoose.Schema;
 
  const picturesSchema = new Schema({
-   userID:{
-     type: Number,
-     required:true
-   },
-    boardID: {
-    type: Number,
-    required:true
-   },
+   userID:[{
+      type: Schema.Types.ObjectId,
+      ref: "User"}]
+   ,
+    boardID: [{
+        type: Schema.Types.ObjectId,
+        ref: "board"
+   }],
  imageID:{
-     type: Number,
-     required: true
+     type: Schema.Types.ObjectId
    },
  imageURL: {
      type: String,

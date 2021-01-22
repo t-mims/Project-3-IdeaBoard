@@ -28,17 +28,17 @@ export function BoardCard({
       columnClassName="my-masonry-grid_column"
     >
       <div>
-        <div class="card">
-          <img class="card-img-top" src={picture} alt=""/>
-          <div class="card-body">
-            <h5 class="card-title">{name}</h5>
-            <p class="card-text">
+        <div className="card">
+          <img className="card-img-top" src={picture} alt=""/>
+          <div className="card-body">
+            <h5 className="card-title">{name}</h5>
+            <p className="card-text">
               {comment}
             </p>
-            <p class="card-text">
+            <p className="card-text">
               {budget}
             </p>
-            <p class="card-text">
+            <p className="card-text">
               {goals}
             </p>
           </div>

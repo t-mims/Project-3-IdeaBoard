@@ -25,7 +25,7 @@ function App() {
         <Route exact path="/UserBoard" component={UserBoard} />
         <Route exact path="/newBoard" component={NewBoard} />
         <Route exact path="/search" component={Search} />
-        <Route exact path="/masonry" component={Masonry} />
+        <Route exact path="/myBoard" component={Masonry} />
         <Route exact path="/logout" component={Logout} />
 
         <Footer />

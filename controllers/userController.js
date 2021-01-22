@@ -8,7 +8,8 @@ module.exports = {
             picture: req.body.picture ,
             comment: req.body.comment ,
             goals: req.body.goals ,
-            budget: req.body.budget 
+            budget: req.body.budget,
+            userID: req.user._id,
         })
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
@@ -25,7 +26,7 @@ module.exports = {
     },
     getBoards: function (req, res) {
         console.log(req.user);
-        db.Board.findOne({ userID: req.user.userID },)
+        db.Board.find({userID: req.user._id},)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     }

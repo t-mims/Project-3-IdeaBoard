@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-mongoose.connect('mongodb://localhost/Board' ),{
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Board'),{
   useNewUrlParser:true,
   useUnifiedTopology:true,
   useCreateIndex:true,

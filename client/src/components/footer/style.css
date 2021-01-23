@@ -1,14 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 .footer {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     text-align: center; 
-    background-color:lightblue;
+    background-color:rgb(163, 181, 187);
     width: "50%";
     margin-top: "1000px";
     font-size: larger;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+    font-family: 'Special Elite', cursive;    
 }
 

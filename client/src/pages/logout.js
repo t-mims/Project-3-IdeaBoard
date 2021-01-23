@@ -5,7 +5,8 @@ function Logout(){
     return(
         <div>
         <Container>
-         <img src='https://memegenerator.net/img/instances/500x/75252820/bye-bye.jpg'></img>
+         <img className="goodbye" src='https://i.ytimg.com/vi/KBKI18n3X3I/maxresdefault.jpg'  alt="goodbye img"></img>
+         <h2 className="goodbye">Hope to see you again soon!</h2>
           </Container>
         </div>
     )

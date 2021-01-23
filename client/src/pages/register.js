@@ -22,7 +22,7 @@ function Register(props){
   }
     return (
    
-        <div>This is home for the home page
+        <div className="innerdiv">
         <Container>
          <h1>Register</h1>
           <form>

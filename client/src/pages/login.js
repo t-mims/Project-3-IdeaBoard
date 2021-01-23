@@ -22,10 +22,10 @@ function Login(props) {
   };
 
   return (
-    <div>
-      This is home for the home page
+    <div className="innerdiv">
+      
       <Container>
-        <h1>Login</h1>
+        <h3>Login</h3>
         <form>
           <div>
             <label for="name">Name</label>

@@ -26,8 +26,7 @@ function NewBoard(props) {
             budget: boards.budget,
             comment: boards.comment,
             goals: boards.goals
-        }).then(window.location.replace("/UserBoard"))
-
+        }).then(props.history.push("/UserBoard"))
     }
 
     return (

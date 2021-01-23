@@ -4,7 +4,7 @@ import API from "../utils/API";
 
 //This is a static page/ may include state in order to greet user by their name but
 // definetly not a necessary function
-function Register(){
+function Register(props){
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
   const [email, setEmail] = useState();
@@ -13,7 +13,7 @@ function Register(){
     API.register({username: username, password: password, email: email})
     .then (res => {
       console.log("user created");
-      window.location.replace("/UserBoard");
+      props.history.push("/UserBoard");
     })
     .catch (error => {
        console.log(error); 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BoardList, BoardCard } from "../components/boardList";
 import API from "../utils/API";
 
-function UserBoard() {
+function UserBoard(props) {
     const [boards, setBoards] = useState([])
 
     useEffect(() => {
@@ -16,8 +16,7 @@ function UserBoard() {
     };
     function handleSubmit(event) {
         event.preventDefault()
-        window.location.replace("/newBoard");
-
+        props.history.push("/newBoard");
     }
     return (
         <div>

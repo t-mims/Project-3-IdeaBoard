@@ -2,9 +2,9 @@
 ### It's the final countdown
 #### A dream is a wish your heart makes, when you build a vision board and GET YOUR A** IN GEAR 
 
-![](quote.jpg) 
+![Quote](./client/public/images.quote.jpg) 
 
-![](FGM2.gif)
+![FGMother](./client/public/images/FGM2.gif) 
 
 ## Overview
 The motivation for the development was creating a source visual goal driven individuals could access to create and personlze a dream board. Providing access to over infinate pictures to attribute to each personalized pin, a notes section with functional capabilities to add details, monitary plans, contributors and export options. Functions of the app include, picture search, note section manipulation, path planning functions and a local repository. A board is included so the user can save their selected options.
@@ -24,5 +24,5 @@ AS a user that enjoys keeping track of their goals ona Pinterest like board, I W
 * Kate Hile
 
 ### Links:
-GitHub: http://github.com/t-mims/Project-3-IdeaBoard 
+GitHub: http://github.com/t-mims/Project-3-IdeaBoard  
 Heroku: http://Ancient-fjord-63838.herokuapp.com 

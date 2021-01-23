@@ -20,7 +20,7 @@ function UserBoard(props) {
         props.history.push("/newBoard");
     }
     return (
-        <div>
+        <div className="innerdiv">
             <Container>
             <BoardList>
                 {boards.map(board => {

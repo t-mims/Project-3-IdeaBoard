@@ -22,7 +22,7 @@ function Login(props) {
   };
 
   return (
-    <div>
+    <div className="innerdiv">
       This is home for the home page
       <Container>
         <h1>Login</h1>

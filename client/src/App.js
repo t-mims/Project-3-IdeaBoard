@@ -1,5 +1,5 @@
 import React from "react";
-import {useHistory} from "react-router-dom";
+import {useHistory} from "react-router";
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";

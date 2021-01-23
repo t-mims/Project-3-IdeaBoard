@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../components/container"
+import Container from "../components/container";
 
 //This is a static page/ may include state in order to greet user by their name but
 // definetly not a necessary function
@@ -9,8 +9,9 @@ function Home(){
         <div>
         <Container>
             <h3>Dream big, dream often, dream wild.</h3>
-          </Container>
         </div>
-    )
+      </Container>
+    </div>
+  );
 }
-export default Home
+export default Home;

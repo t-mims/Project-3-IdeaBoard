@@ -32,7 +32,7 @@ function NewBoard(props) {
     return (
         <div>
             <Container>
-                <h1>"See it, Believe it"</h1>
+                <h3>"See it, Believe it"</h3>
                 <form>
                     <h3>Board Name</h3>
                     <Input

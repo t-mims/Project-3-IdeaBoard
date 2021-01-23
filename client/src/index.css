@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Patrick+Hand+SC&display=swap');
 .masonry-container {
   width: 80%;
   margin: auto;
@@ -47,9 +48,20 @@ code {
     monospace;
 }
 body{
-	background-image: url("./IMG_0876.jpeg"),url("./IMG_0812.jpeg");
-	background-size: contain;
+	background-image: url("./staticBackground.jpg");
+  background-size: cover;
+  font-family: 'Josefin Slab', serif;
 }
 h3{
-	text-align: center;
+  text-align: center;
+  color: aliceblue;
+  font-size: 75px;
+  background-color: rgb(73, 180, 223);
+  margin-top: 50px;
+  padding: 25px;
+}
+.goodbbye{
+  text-align: center;
+  align-items: center;
+  background-color: dimgray;
 }

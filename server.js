@@ -5,6 +5,7 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const session = require("express-session")
+const path= require("path");
 
 
 // app.use(express.static('./public'));

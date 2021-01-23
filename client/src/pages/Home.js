@@ -6,9 +6,9 @@ import Container from "../components/container"
 function Home(){
     return (
    
-        <div>Dream big, dream often, dream wild.
+        <div>
         <Container>
-         <image src=""></image>
+            <h3>Dream big, dream often, dream wild.</h3>
           </Container>
         </div>
     )

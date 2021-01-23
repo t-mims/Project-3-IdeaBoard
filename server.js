@@ -5,7 +5,7 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const session = require("express-session")
-const path= require("path");
+const path = require("path");
 
 
 // app.use(express.static('./public'));
@@ -27,12 +27,12 @@ if (process.env.NODE_ENV === "production") {
 require("./routes/api/api-routes")(app);
 app.use(routes);
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Board'), {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Board', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
   useFindAndModify: false
-}
+})
 
 // Start the server
 app.listen(PORT, function () {

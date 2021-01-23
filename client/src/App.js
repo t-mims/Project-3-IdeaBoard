@@ -19,14 +19,14 @@ function App() {
       <div>
         <Navbar />
         {/* these components still need to be defined */}
-        <Route exact path="/login" component={Login} />
+        <Route path="/login" component={Login} />
         <Route exact path="/" component={Home} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/UserBoard" component={UserBoard} />
-        <Route exact path="/newBoard" component={NewBoard} />
-        <Route exact path="/search" component={Search} />
-        <Route exact path="/myBoard" component={Masonry} />
-        <Route exact path="/logout" component={Logout} />
+        <Route path="/register" component={Register} />
+        <Route path="/UserBoard" component={UserBoard} />
+        <Route path="/newBoard" component={NewBoard} />
+        <Route path="/search" component={Search} />
+        <Route path="/myBoard" component={Masonry} />
+        <Route path="/logout" component={Logout} />
 
         <Footer />
       </div>

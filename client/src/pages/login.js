@@ -26,7 +26,7 @@ function Login(props) {
       
       <Container>
         <h3>Login</h3>
-        <form>
+        <form className="center">
           <div>
             <label for="name">Name</label>
             <input

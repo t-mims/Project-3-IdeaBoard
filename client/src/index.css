@@ -68,3 +68,7 @@ h3{
 .innerdiv{
   background-color: rgb(73, 180, 223);
 }
+.center{
+  text-align: center;
+  align-items: center;
+};

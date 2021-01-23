@@ -7,7 +7,7 @@
 ![FGMother](./client/public/images/FGM2.gif) 
 
 ## Overview
-The motivation for the development was creating a source visual goal driven individuals could access to create and personlze a dream board. Providing access to over infinate pictures to attribute to each personalized pin, a notes section with functional capabilities to add details, monitary plans, contributors and export options. Functions of the app include, picture search, note section manipulation, path planning functions and a local repository. A board is included so the user can save their selected options.
+The motivation for the development was creating a source visual goal driven individuals could access to create and personalize a dream board. Providing access to infinite pictures to attribute to each personalized pin, a notes section with functional capabilities to add details, monetary plans, contributors and export options. Functions of the app include, picture search, note section manipulation, path planning functions and a local repository. A board is included so the user can save their selected options.
 
 ## Process
 The tech used included the Google API, Mongo, Masonry, React, Passport, HTML, CSS, JS, and Heroku. 

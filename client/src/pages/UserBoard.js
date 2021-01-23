@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BoardList, BoardCard } from "../components/boardList";
 import API from "../utils/API";
+import Container from "../components/container";
 
 function UserBoard(props) {
     const [boards, setBoards] = useState([])
@@ -20,6 +21,7 @@ function UserBoard(props) {
     }
     return (
         <div>
+            <Container>
             <BoardList>
                 {boards.map(board => {
                     return (
@@ -40,6 +42,7 @@ function UserBoard(props) {
                 onClick={handleSubmit}>
                 add new board
             </button>
+            </Container>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Container from "../components/container";
 import API from "../utils/API";
+import {Link} from "react-router-dom"
 
 //This is a static page/ may include state in order to greet user by their name but
 // definetly not a necessary function
@@ -59,7 +60,7 @@ function Register(props){
               Register
             </button>
           </form>
-          <p >Have An Account? <a href="/login">Login</a></p>
+          <p >Have An Account? <Link to="/login">Login</Link></p>
           </Container>
         </div>
     )

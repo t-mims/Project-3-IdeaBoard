@@ -4,7 +4,7 @@ import API from "../utils/API";
 
 //This is a static page/ may include state in order to greet user by their name but
 // definetly not a necessary function
-function Login() {
+function Login(props) {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
@@ -14,7 +14,7 @@ function Login() {
       .then((res) => {
         console.log("login");
         //redirect to Board page
-        window.location.replace("/UserBoard");
+        props.history.push("/UserBoard");
       })
       .catch((error) => {
         console.log(error);

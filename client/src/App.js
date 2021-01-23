@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {useHistory} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import NewBoard from "./pages/newBoard";
@@ -14,19 +15,20 @@ import Logout from "./pages/logout";
 
 //and import other necessary pages (which will correspond to the routes) and compnents
 function App() {
+  let history= useHistory();
   return (
     <Router>
       <div>
         <Navbar />
         {/* these components still need to be defined */}
-        <Route exact path="/login" component={Login} />
+        <Route path="/login" component={Login} />
         <Route exact path="/" component={Home} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/UserBoard" component={UserBoard} />
-        <Route exact path="/newBoard" component={NewBoard} />
-        <Route exact path="/search" component={Search} />
-        <Route exact path="/myBoard" component={Masonry} />
-        <Route exact path="/logout" component={Logout} />
+        <Route path="/register" component={Register} />
+        <Route path="/UserBoard" component={UserBoard} />
+        <Route path="/newBoard" component={NewBoard} />
+        <Route path="/search" component={Search} />
+        <Route path="/myBoard" component={Masonry} />
+        <Route path="/logout" component={Logout} />
 
         <Footer />
       </div>

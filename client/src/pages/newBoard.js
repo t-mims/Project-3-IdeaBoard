@@ -4,7 +4,7 @@ import { Input, Text, BoardButton } from "../components/boardForm";
 import API from "../utils/API";
 
 // will require integration of state as well as handleSumbits for adding/saving
-function NewBoard() {
+function NewBoard(props) {
     const [boards, setBoards] = useState({
         user: "",
         comment: "",
@@ -26,8 +26,7 @@ function NewBoard() {
             budget: boards.budget,
             comment: boards.comment,
             goals: boards.goals
-        }).then(window.location.replace("/UserBoard"))
-
+        }).then(props.history.push("/UserBoard"))
     }
 
     return (

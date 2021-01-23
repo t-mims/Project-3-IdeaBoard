@@ -1,11 +1,9 @@
 .navbar-brand {
-    background-color: lightblue;
     margin-left: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;    
 }
 .navbar-nav {
-    background-color: lightblue;
     margin-right: 500px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

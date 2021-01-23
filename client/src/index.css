@@ -47,7 +47,7 @@ code {
     monospace;
 }
 body{
-	background-image: url("./IMG_0876.jpeg"),("./IMG_0812.jpeg");
+	background-image: url("./IMG_0876.jpeg"),url("./IMG_0812.jpeg");
 	background-size: contain;
 }
 h3{

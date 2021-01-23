@@ -10,7 +10,7 @@
 The motivation for the development was creating a source visual goal driven individuals could access to create and personlze a dream board. Providing access to over infinate pictures to attribute to each personalized pin, a notes section with functional capabilities to add details, monitary plans, contributors and export options. Functions of the app include, picture search, note section manipulation, path planning functions and a local repository. A board is included so the user can save their selected options.
 
 ## Process
-The tech used included the Google API, Best Ever API, Mongo, MySQL, Masonry, React, Passport, HTML, CSS, JS, and Heroku. 
+The tech used included the Google API, Mongo, Masonry, React, Passport, HTML, CSS, JS, and Heroku. 
 
 ## But,Why?
 This app is solving the user’s need of being able to create a personalized goals/dreams board, search by pictures catagory type, pick a picture to designate the goal/dream and then saving to their personalized board. We build the app to be user friendly and without a subscription. This interface will appeal to the individuals whom want to visualize and impliment a visual goals board on a technical platform. The functionality of attaching the users personal choice of visual with a notes section that can be manipulated and adapted fascilitates a multifunctional experience. The platform offers multi search functions and local repository capabilities.
@@ -24,5 +24,5 @@ AS a user that enjoys keeping track of their goals ona Pinterest like board, I W
 * Kate Hile
 
 ### Links:
-GitHub:
-Heroku:
+GitHub: http://github.com/t-mims/Project-3-IdeaBoard 
+Heroku: http://Ancient-fjord-63838.herokuapp.com 
